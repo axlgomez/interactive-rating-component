@@ -1,0 +1,28 @@
+@mixin break-point($breakpoint) {
+    
+    @if $breakpoint == movil-L {
+        @media screen and (min-width: 450px) { @content }
+    }
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin flex($display, $justify: null, $direction: null, $gap: null, $align: null) {
+    display: $display;
+    justify-content: $justify;
+    flex-direction: $direction;
+    gap: $gap;
+    align-items: $align;
+}
+
+@mixin text($size, $color, $background: null) {
+    font-size: $size;
+    color: $color;
+    background: $background;
+}

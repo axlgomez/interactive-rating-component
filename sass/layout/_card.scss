@@ -1,0 +1,54 @@
+@use "../base/" as *;
+@use "../abstract/" as *;
+
+.thank
+{
+    width: 90%;
+    margin: 12rem auto;
+    padding: 3rem 7%;
+    background: $dark-blue; 
+    border-radius: 3rem;
+    text-align: center;
+    @include position(absolute, $top: 1rem, $right: 0, $left: 0);
+    display: none;
+
+    @include break-point(movil-L)
+    {
+        width: 380px;
+        padding: 3rem;
+    }
+
+    &.active
+    {
+        display: block;
+        animation: backInDown;
+        animation-duration: 1s;
+    }
+
+    &__illustration
+    {
+        margin: auto;
+        width: 150px;
+    }
+
+    &__rating
+    {
+        width: 16rem;
+        margin: 2.5rem auto 2.7rem;
+        @include text($size, rgba($color: orange, $alpha: .8), rgba($color: $medium-grey, $alpha: .1));
+        border-radius: 2rem;
+        padding: .4rem .8rem;
+    }
+
+    &__title
+    {
+        @include text($size-title, $white);
+        font-weight: map-get($weights, regular);
+        margin-bottom: .5rem;
+    }
+
+    &__text
+    {
+        @include text($size, $light-grey);
+    }
+}

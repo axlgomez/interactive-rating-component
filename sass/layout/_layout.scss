@@ -1,0 +1,138 @@
+@use "../base/" as *;
+@use "../abstract/" as *;
+
+*
+{
+    font-family: $font-primary;
+    margin: 0; padding: 0;
+    outline: none; border: none;
+    list-style: none;
+    text-decoration: none;
+    transition: .2s all linear;
+}
+
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body
+{
+    background: $very-dark-blue;
+}
+
+.rating
+{
+    width: 90%; 
+    margin: 12rem auto;
+    padding: 3rem 7%;
+    background: $dark-blue;
+    border-radius: 3rem;
+    // display: none;
+
+    @include break-point(movil-L)
+    {
+        width: 400px;
+        padding: 3rem 3.5rem;
+    }
+
+    &.animation
+    {
+        animation: shakeX;
+        animation-duration: 1s;
+    }
+
+    &__star
+    {
+        background: rgba($color: $medium-grey, $alpha: .1);
+        width: 3.3rem;
+        border-radius: 100%;
+    }
+
+    &__icon
+    {
+        width: 33px;
+        padding: 1rem;
+    }
+
+    &__title
+    {
+        margin: 1rem 0;
+        @include text($size-title, $white);
+    }
+
+    &__text
+    {
+        @include text($size, $light-grey);
+    }
+
+    &__list
+    {
+        @include flex(flex, $justify: space-between, $align: center);
+        margin: 3rem 0;
+
+        @include break-point(movil-L)
+        {
+            transform: translateX(-1rem);
+        }
+    }
+
+    &__input
+    {
+        visibility: hidden;
+    }
+
+    &__label
+    {
+        @include text($size, $light-grey);
+        background-color: rgba($color: $medium-grey, $alpha: .1);
+        padding: 1.1rem 1.6rem; //.9rem 1.4rem
+        border-radius: 50%;
+        transition: .5s ease;
+        cursor: pointer;
+
+        &.active
+        {
+            background: $medium-grey;
+            color: $white;
+        }
+
+        &:hover
+        {
+            background: orange;
+            color: $white;
+        }
+    }
+
+    &__btn
+    {
+        display: block;
+        margin: auto;
+        width: 95%;
+        padding: 1rem;
+        @include text($size, $white, $orange);
+        border-radius: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: map-get($weights, bold);
+        border: 1px solid $very-dark-blue;
+        transition: .7s ease;
+        cursor: pointer;
+
+        &:hover
+        {
+            background-color: $white;
+            color: orange;
+        }
+    }
+
+    &__output
+    {
+        text-align: center;
+        margin-top: 1rem;
+        @include text($size, $orange);
+    }
+
+}

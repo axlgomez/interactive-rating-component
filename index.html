@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/js/main.js" defer></script>
+    <title>Interactive rating component</title>
+</head>
+<body>
+    
+     <!-- Rating state start -->
+
+    <section class="rating" id="rating">
+        <div class="rating__star">
+            <img class="rating__icon" src="/images/icon-star.svg" alt="icon-star">
+        </div>
+        <h1 class="rating__title">How did we do?</h1>
+        <p class="rating__text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+        <div class="rating__list">
+            <div class="rating__toge">
+                <input class="rating__input" type="radio" name="rate" id="one" value="1">
+                <label class="rating__label" for="one">1</label>
+            </div>
+
+            <div class="rating__toge">
+                <input class="rating__input" type="radio" name="rate" id="two" value="2">
+                <label class="rating__label" for="two">2</label>
+            </div>
+
+            <div class="rating__toge">
+                <input class="rating__input" type="radio" name="rate" id="three" value="3">
+                <label class="rating__label" for="three">3</label>
+            </div>
+
+            <div class="rating__toge">
+                <input class="rating__input" type="radio" name="rate" id="four" value="4">
+                <label class="rating__label" for="four">4</label>
+            </div>
+
+            <div class="rating__togue">
+                <input class="rating__input" type="radio" name="rate" id="five" value="5">
+                <label class="rating__label" for="five">5</label>
+            </div>
+        </div>
+
+        <button class="rating__btn" type="submit" id="button">Submit</button>
+
+        <p class="rating__output" id="output"></p>
+    </section>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+
+    <section class="thank" id="thank">
+        <img class="thank__illustration" src="/images/illustration-thank-you.svg" alt="illustration-thank-you">
+        <p class="thank__rating">You selected <span id="thankRate"></span> out of 5</p>
+        <h1 class="thank__title">Thank you!</h1>
+        <p class="thank__text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </section>
+
+      <!-- Thank you state end -->
+    
+</body>
+</html>
